@@ -1,0 +1,23 @@
+def bennevan():
+    n = int(input(""))
+    while n > 0:
+        sorozat_hossz = int(input("")) #pl.6
+        sorozat = input("").split(" ") #pl. 1 2 3 4 5 6
+        al_hossz = int(input("")) # pl. 3
+        alsorozat = input("").split(" ") #pl. 2 3 4
+
+        eredmény = False
+        for i in range(0, sorozat_hossz - al_hossz + 1):
+            if alsorozat == sorozat[i: i + al_hossz]:
+                eredmény = True
+                break
+
+        if eredmény:
+            print("Yes")
+        else:
+            print("No")
+
+        n -= 1
+
+
+bennevan()
